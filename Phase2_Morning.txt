@@ -1,0 +1,12 @@
+Day 1:
+Traditional Deployment - Desktop / PC Deployment
+Modern Deployment - Server Farms / Data Centers / Cloud
+Reason: User Base is all over the world.
+
+2 -tier:
+1.) Client tier - Presentation logic
+2.) Data tier - Business logic and DB
+
+Eclipse IDE - Create a Dynamic Web project -> html files, servlets, jsp, jdbc, web.xml
+
+
