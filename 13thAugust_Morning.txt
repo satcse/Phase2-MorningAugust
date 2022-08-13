@@ -1,0 +1,12 @@
+1.) Download and install MySQL
+2.) Configure the MySQL Workbench and add the server.
+3.) Create a Schema in the MySQL Workbench
+4.) Download the mysql-connector-jar file.
+5.) Create a Dynamic Web Project in Eclipse.
+6.) Add the above jar file to the Project's Build Path.
+7.) Add the same jar file to the Apache Tomcat's lib folder.
+
+Servlets - http://localhost:8080/AppName
+JDBC - jdbc:mysql://localhost:3306/ecommerce
+Structure - <protocol>:<database>://<hostname>:<port_number>/<schema_name>
+
