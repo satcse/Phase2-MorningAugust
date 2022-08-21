@@ -1,0 +1,5 @@
+ID,ftype,name,product_id
+1,CREDITCARD,"EMI on Citibank Card",1
+3,BANK,"40% finance from SBI",2
+4,BANK,"60% finance from ICICI",3
+5,BANK,"20% finance from ICICI",1
