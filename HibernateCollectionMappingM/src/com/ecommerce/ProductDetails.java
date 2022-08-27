@@ -42,6 +42,8 @@ public class ProductDetails extends HttpServlet {
              
               
              List<EProduct> list = session.createQuery("from EProduct").list();
+          // Eager - Have data for eproduct, color, os , screensizes, finance
+          // Lazy - Have data for eproduct
              
               PrintWriter out = response.getWriter();
               out.println("<html><body>");
@@ -51,35 +53,33 @@ public class ProductDetails extends HttpServlet {
                                       ", Price: " + String.valueOf(p.getPrice()) + ", Date Added: " + p.getDateAdded().toString());
                       
                       //Association Fetching Code
-                      List<Color> colors = p.getColors();
+                      List<Color> colors = p.getColors();// Lazy cascade is done and Colors data is fetched from the colors table.
                       out.println("Colors: ");
                       for(Color c: colors)
                       {
                     	  out.println(c.getName() + "&nbsp;");
                       }
                       
-                      Collection<ScreenSizes> sizes= p.getScreenSizes();
+                      Collection<ScreenSizes> sizes= p.getScreenSizes();// Lazy cascade is done and Screensizes data is fetched from the Screensizes table.
                       out.println(", Screen Sizes: ");
                       for(ScreenSizes s: sizes) {
                               out.print(s.getSize() + "&nbsp;");
                       }
                       
-                      Set<OS> os= p.getOs();
+                      Set<OS> os= p.getOs();// Lazy cascade is done and OS data is fetched from the OS table.
                       out.println(", OS : ");
                       for(OS o: os) {
                               out.print(o.getName() + "&nbsp;");
                       }
                       
-                      Map finances = p.getFinance();
-                      out.println(", Finance Options: ");
-                      if (finances.get("CREDITCARD") != null) {
-                             Finance f = (Finance) finances.get("CREDITCARD");
-                             out.println(f.getName() + " &nbsp;");
-                      }
-                      if (finances.get("BANK") != null) {
-                             Finance f = (Finance) finances.get("BANK");
-                             out.println(f.getName() + " &nbsp;");
-                      }
+				/*
+				 * Map finances = p.getFinance();// Lazy cascade is done and Finance data is
+				 * fetched from the Finance table. out.println(", Finance Options: "); if
+				 * (finances.get("CREDITCARD") != null) { Finance f = (Finance)
+				 * finances.get("CREDITCARD"); out.println(f.getName() + " &nbsp;"); } if
+				 * (finances.get("BANK") != null) { Finance f = (Finance) finances.get("BANK");
+				 * out.println(f.getName() + " &nbsp;"); }
+				 */
                       
                       
                       out.println("<hr>");

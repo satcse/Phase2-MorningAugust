@@ -9,16 +9,16 @@ import java.util.Set;
 
 public class EProduct {
 
-	private long ID;
+	private long ID; // Asus Laptop
 	private String name;
 	private BigDecimal price;
 	private Date dateAdded;
 	
 	//Associations
-	private List<Color> colors;
-	private Collection<ScreenSizes> screenSizes;
-	private Set<OS> os;
-	private Map finance;
+	private List<Color> colors; // Green, Blue, Grey
+	private Collection<ScreenSizes> screenSizes; // 14 inch, 15.6 inch
+	private Set<OS> os;// Windows 11, Linux
+	private Map finance; // HDFC Card EMI, ICICI Card EMI, Kotak Card EMI
 	
 	public EProduct()
 	{
