@@ -1,0 +1,23 @@
+POST API:
+URL:http://localhost:8080/api/postcomments
+
+Message Body:
+{
+    "id":12345,
+    "postName":"My first Post",
+    "comment":"My first comment in this post"
+}
+
+GET API:http://localhost:8080/api/comments/2
+Delete API: http://localhost:8080/api/dcomments/1
+
+jackson-databind-2.13.3.jar
+jackson-annotations-2.13.3.jar
+jackson-core-2.13.3.jar
+jackson-datatype-jdk8-2.13.3.jar
+jackson-datatype-jsr310-2.13.3.jar
+jackson-module-parameter-names-2.13.3.jar
+
+
+# id	comment	created_at	post_name	updated_at
+1	My first comment in this post		My first Post	
