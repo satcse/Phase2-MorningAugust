@@ -1,0 +1,1 @@
+<% out.println("This is content from the newfile.jsp<br>"); %>
